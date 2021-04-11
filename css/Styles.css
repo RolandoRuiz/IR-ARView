@@ -1,0 +1,1335 @@
+*, *::before, *::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.LeaveArea{
+    max-height: 9.5vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+#HeaderBase{
+    height: 9.5vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-right: 9.5vmin; padding-left: 9.5vmin;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
+    transition: backdrop-filter 0.2s ease-in-out, background-color 0.4s 0.2s ease-in;
+}
+
+.HeaderLogo{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column: 1/5;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.HeaderDropdown{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    grid-column: 5/6;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#Logo{
+    height: 8vh;
+    object-fit: contain;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+.DropdownButton{
+    height: 4.2vh;
+    width: 4.2vh;
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 0.3s ease-in, height 0.2s ease-in-out, width 0.2s ease-in-out;
+    box-shadow:0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}   
+
+.DropdownButton:hover{
+    height: 4.4vh;
+    width: 4.4vh;
+    box-shadow:0px 0px 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+.DropdownMenu{
+    height: 35vh;
+    width: 50vmin;
+    
+    position: absolute;
+    display: none;
+    top: 9.5vh;
+    right: 9vmin;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0px 0px 8px 8px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.Selectionbox{
+    height: 4vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 1vh;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, font-size 0.1s ease-in-out;
+}
+
+.Selectionbox:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+}
+
+.Selectionbox > a{
+    text-decoration: none;
+    color: rgb(21, 21, 21);
+}
+
+.Home{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 100;
+}
+
+#HomeBackground{
+    height: 85vh;
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    background-image: url(/imprey/img/Categories/CategoryWearables.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow:0px 0px 10px 2px rgba(100, 100, 100, 0.8);
+}
+
+.HomeDisplay{
+    height: 85vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.HomeTexts{
+    position: absolute;
+}
+
+#DT1{
+    font-family: 'Montserrat';
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 700;
+    font-size: min(max(1rem, 7vw), 18px);
+}
+
+#DT2{
+    font-family: 'Montserrat';
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    font-size: min(max(1rem, 6vw), 16px);
+}
+
+.HomeIcons{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.HIcon{
+    filter: invert(15%);
+    height: 26vw;
+    width: 26vw;
+}
+
+.HomeDivider{
+    height: 15vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 1);
+    clip-path: inset(0% 0%);
+    z-index: -1;
+}
+
+.TextBox{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 9vmin;
+    padding-left: 9vmin;
+    padding-bottom: 4%;
+    transition: opacity 0.3s ease-in;
+}
+
+#TextBox1{
+    display: flex;
+}
+
+#TextBox2{
+    display: none;
+}
+
+#TextBox3{
+    display: none;
+}
+
+#TextBox4{
+    display: none;
+}
+
+.HomeTitleText{
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(1rem, 10vw), 45px);
+    color: rgb(255, 255, 255);
+}
+
+.HomeSubText{
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: min(max(1rem, 6.5vw), 23px);
+    padding-bottom: 0.4vh;
+    color: rgb(255, 255, 255);
+    border-bottom: solid white 3px;
+}
+
+.show{
+    display: flex;
+    animation-name: appear;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.notshow{
+    display: flex;
+    animation-name: disappear;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes disappear{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes appear2{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+/**********************************************************************************************************/
+
+.Descubrir{
+    height: 260vh;
+    width: 100vw;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+
+    background-image: url(/imprey/img/MainPattern.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 100vh;
+    padding-bottom: 9.5vmin;
+    z-index: 10;
+    box-shadow:0px 0px 10px 2px rgba(100, 100, 100, 0.8);
+}
+
+.DescubrirInicio{
+    height: 60vh;
+    width: 100vw;
+
+    display: grid;
+    grid-column: 1/6;
+    grid-template-columns: repeat(5, 1fr);
+
+    background-color: rgb(21, 21, 21);   
+    box-shadow: 0px 0px 20px 1px rgba(21, 21, 21, 0.5);
+}
+
+.Titletext{
+
+    grid-column: 2/5;
+    align-self: end;
+    margin-bottom: 4.5vh;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(1rem, 8vw), 35px);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 5px 10px rgb(0, 0, 0);
+}
+
+.TitletextBlack{
+
+    grid-column: 2/5;
+    align-self: center;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(1rem, 8vw), 35px);
+    text-align: center;
+    color: rgb(21, 21, 21);
+}
+
+.VideoExpandButton{
+    height: 4vh;
+    width: 4vh;
+
+    grid-column: 5/6;
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 5.5vh;
+    margin-right: 9vmin;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.3s ease-in;
+    
+}  
+
+.VideoExpandButton:hover{
+    box-shadow:0px 0px 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+.DescubrirTexto{
+    height: 37vh;
+    width: 90vw;
+
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.8em;
+    align-self: end;
+    justify-self: center;
+    padding: 4vmin;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20px 1px rgba(21, 21, 21, 0.5);
+    border-radius: 15px 15px 15px 15px;
+    z-index: 5;
+}
+
+.DescubrirTexto, .DescubrirInicio{
+    grid-row: 10/-25;
+}
+
+.ContentText{
+    grid-column: 1/9;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: min(max(0.5rem, 3.2vw), 18px);
+    text-align: justify;
+    color: black;
+}
+
+.Categorias{
+    grid-column: 1/9;
+    grid-row: 4/6;
+    align-self: end;
+    justify-self: end;
+}
+
+.DescubrirBtn{
+    height: 4.5vh;
+    border-radius: 40px;
+    background-color: rgb(21, 21, 21);
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: min(max(0.5rem, 3.2vw), 18px);
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.DescubrirBtn:hover{
+    animation: PulseBlack 2s infinite ease-in;
+}
+
+.CategoriasBox{
+    grid-column: 1/6;
+    grid-row: 15/24;
+    width: 90vw;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 3vh;
+    padding-bottom: 4vh;
+    padding-top: 6vh;
+    
+}
+
+.Catalogue{
+    grid-column: 1/6;
+    grid-row: 24/25;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    box-shadow: 0px 0px 20px 1px rgba(21, 21, 21, 0.5);
+    margin-bottom: 1.5vmin;
+}
+
+.CuadroCategoria1{
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 10px;
+    grid-column: 1/2;
+}
+
+.CuadroCategoria2{
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 10px;
+    grid-column: 2/3;
+}
+
+.CuadroCategoria3{
+    background-color: transparent;
+    perspective: 1000px;
+    border-radius: 10px;
+    grid-column: 3/4;
+}
+
+.CCInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.CCFront1, .CCFront2, .CCFront3, .CCBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.5);
+    border-radius: 15px;
+}
+
+.CCFront1{
+    background-color: rgb(0, 0, 0, 0.5);
+    background-image: url(/imprey/img/Categories/CategoryCeramics.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+.CCFront2{
+    background-color: rgb(0, 0, 0, 0.5);
+    background-image: url(/imprey/img/Categories/CategoryWearables.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+.CCFront3{
+    background-color: rgb(0, 0, 0, 0.5);
+    background-image: url(/imprey/img/Categories/CategoryMetals.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+.CCBack{
+    background-color: rgba(255, 255, 255, 0.96);
+    transform: rotateY(180deg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.BottomArea{
+    grid-row: 8/11;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0px 0px 15px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Title2{
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(1rem, 5.5vw), 35px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    align-self: end;
+    justify-self: center;
+}
+
+.Snipet{
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: min(max(0.5rem, 3.5vw), 15px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    align-self: start;
+    justify-self: start;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.CatText{
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: min(max(0.5rem, 3.5vw), 15px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+.SnipetBtn{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: flex-end;
+
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255);
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(0.5rem, 3.5vw), 15px);
+    padding-left: 1.5vmin;
+    padding-right: 1.5vmin;
+    margin-right: 1.5vmin;
+    padding-top: 0.5vmin;
+    padding-bottom: 0.5vmin;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(38, 38, 38);
+    outline: none;
+}
+
+.SnipetBtn:hover{
+    animation: Pulse 2s infinite ease-in;
+}
+
+.SizeUp{
+    transition: transform 0.15s ease-in-out;
+}
+
+.SizeUp:hover{
+    transform: scale(1.1);
+}
+
+.BgnCon1{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-radius: 15px 15px 0px 0px;
+    background-image: url(/imprey/img/Categories/CategoryCeramics.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.BgnCon2{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-radius: 15px 15px 0px 0px;
+    background-image: url(/imprey/img/Categories/CategoryWearables.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.BgnCon3{
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-radius: 15px 15px 0px 0px;
+    background-image: url(/imprey/img/Categories/CategoryMetals.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.IconS{
+    grid-column: 2/3;
+    grid-row: 3/5;
+    border-radius: 15px;
+}
+
+.MiniIcon{
+    height: 100%;
+    background-color: rgb(14, 14, 14);
+    padding: 4%;
+    border-radius: 100%;
+}
+
+.Content{
+    grid-column: 1/4;
+    grid-row: 5/10;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    overflow-y: scroll;
+}
+
+.CText{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: min(max(0.5rem, 3.2vw), 16px);
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.CloseBtn{
+    grid-column: 2/4;
+    grid-row: 10/11;
+    
+    align-self: center;
+    justify-self: flex-end;
+
+    border-radius: 40px;
+    background-color: rgb(21, 21, 21);
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(0.5rem, 3.5vw), 15px);
+    padding-left: 1.5vmin;
+    padding-right: 1.5vmin;
+    padding-top: 0.5vmin;
+    padding-bottom: 0.5vmin;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    outline: none;
+    margin-right: 4vmin;
+    margin-bottom: 2vmin;
+}
+
+.CloseBtn:hover{
+    animation: PulseBlack 2s infinite ease-in;
+}
+
+
+.PasoTitle{
+    grid-column: 2/5;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(21, 21, 21);
+    border-radius: 0px 0px 15px 15px;
+    z-index: 0;
+
+}
+
+.MiddleLine{
+    grid-column: 1/6;
+    width: 100vw;
+    justify-self: center;
+    border-bottom: solid 8px rgb(21, 21, 21);
+}
+
+#MiddleLineProgress{
+    grid-column: 1/6;
+    width: 25%;
+    justify-self: flex-start;
+    animation: LineColor 2s ease-in-out infinite;
+    transition: width 0.5s ease-in-out;
+}
+
+.CirclesBox{
+    grid-column: 1/6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.MiddleLine, .CirclesBox, #MiddleLineProgress{
+    grid-row: 11/12;
+}
+
+.PTitle{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: min(max(0.5rem, 3.5vw), 19px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.CircleBtn{
+    height: 9vmin;
+    width: 9vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(0.5rem, 3.5vw), 19px);
+    text-align: center;
+    color: rgb(21, 21, 21);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.CircleBtn:focus{
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 21, 21);
+}
+
+.PasosBox{
+    grid-column: 1/6;
+    grid-row: 12/15;
+    width: 90vw;
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.5);
+    margin-top: 3vmin;
+    border-radius: 15px;
+}
+
+.PB{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PBTitle{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: min(max(1rem, 6vw), 28px);
+    text-align: center;
+    color: rgb(21, 21, 21);
+    align-self: center;
+    justify-self: center;
+    margin: 2vmin;
+}
+
+.PBText{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: min(max(0.5rem, 4vw), 18px);
+    padding: 2vmin;
+    text-align: center;
+    color: black;
+}
+
+.PBText2{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: min(max(0.5rem, 4vw), 16px);
+    text-align: center;
+    color: black;
+}
+
+#PB2{
+    display: none;
+}
+
+#PB3{
+    display: none;
+}
+
+#PB4{
+    display: none;
+}
+
+#map{
+    height: 68vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+}
+
+.map{
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.2);
+
+}
+
+.ContactDivider{
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ContactBox{
+    height: 30vmin;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 5%;
+    left: 1.5vmin;
+    bottom: 2vmin;
+    z-index: 20;
+    border-radius: 2.5px;
+}
+
+.ContactIconBox{
+    height: 100%;
+    width: 8vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(21, 21, 21);
+    box-shadow: 0px 0px 3px 0.5px rgba(21, 21, 21, 0.3);
+    z-index: 20;
+    border-radius: 2.5px;
+}
+
+.ContactTextBox{
+    height: 100%;
+    width: 50vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 20;
+    border-radius: 2.5px;
+}
+
+.CIconBox{
+    height: 5vmin;
+    width: 5vmin;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: filter 0.1s ease-in-out;
+}
+
+.CIconBox:hover{
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.IconText{
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(38, 38, 38);
+    position: absolute;
+    left: 8vmin;
+}
+
+.CTextBox{
+    width: 100%;
+    height: 7vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 3px 0.5px rgba(21, 21, 21, 0.3);
+    
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: min(max(0.5rem, 3vw), 16px);
+    text-align: center;
+    color: black;
+    transition: opacity 0.3s ease-in-out;
+}   
+
+#CTB1{
+    opacity: 0;
+}
+
+#CTB2{
+    opacity: 0;
+}
+
+#CTB3{
+    opacity: 0;
+}
+
+
+/**********************************************************************************************************/
+
+.Contacto{
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+
+.Footer{
+    height: 10vh;
+    width: 100vw;
+    display: grid;
+    position: relative;
+    z-index: 10;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: rgba(0, 0, 0, 0.88);
+    box-shadow:0px 0px 10px 2px rgba(100, 100, 100, 0.8);
+
+}
+
+.Rights{
+    grid-column: 1/8;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: min(max(0.5rem, 3.8vw), 16px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.PageLinks{
+    grid-column: 1/8;
+    grid-row: 3/4;
+    align-self: center;
+    justify-self: center;
+
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: min(max(0.5rem, 3.4vw), 12px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.ExtLinks{
+    grid-column: 1/8;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: min(max(0.5rem, 3.4vw), 12px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.ExtLinks a, .PageLinks a{
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.ExtLinks a:hover, .PageLinks a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+/**********************************************************************************************************/
+
+.GetStartedBox{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    top: 0;
+}
+
+.GetStartedBackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url(/imprey/img/MainPattern.png);
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.15);
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+}
+
+.GSHeader{
+    font-family: "montserrat";
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.95em;
+    text-align: center;
+    z-index: 100;
+    padding-bottom: 0.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.GSTitle{
+    font-family: "montserrat";
+    color: rgba(255, 255, 255, 1);
+    font-size: min(max(1rem, 15vw), 45px);
+    font-weight: 700;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 4%;
+    z-index: 100;
+}
+
+#TextColors, .TextColors{
+    animation: Colors 4s infinite;
+}
+
+@keyframes Colors{
+    0% {Color: cyan}
+    33.3% {color: magenta;}
+    66.6% {color: yellow;}
+    100% {Color: cyan}
+}
+
+@keyframes LineColor{
+    0% {border-bottom: solid 8px cyan;}
+    33.3% {border-bottom: solid 8px magenta;}
+    66.6% {border-bottom: solid 8px yellow;}
+    100% {border-bottom: solid 8px cyan;}
+}
+
+.GSButtons{
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+
+}
+
+.FunBtn button{
+    width: 20vmax;
+    font-family: "montserrat";
+    color: rgba(0, 0, 0, 0.9);
+    font-size: min(max(1rem, 4vw), 22px);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    outline-style: none;
+}
+
+.FunBtn button:hover{
+    animation: Pulse 2s infinite ease-in;
+}
+
+@keyframes Pulse{
+    0% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);}
+    50% {box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
+    100%{box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
+
+}
+
+@keyframes PulseBlack{
+    0% {box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);}
+    50% {box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
+    100%{box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
+
+}
+
+.BorBtn button{
+    width: 18vmax;
+    font-family: "montserrat";
+    color: rgba(255, 255, 255, 0.7);
+    font-size: min(max(1rem, 2vw), 20px);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: rgba(255, 255, 255, 0.7) 1px solid;
+    border-radius: 50px;
+    background-color: transparent;
+    outline-style: none;
+}
+
+.IconBox{
+    height: 15vmin;
+    width: 65vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 50;
+    padding-bottom: 10%;
+}
+
+.AIcon{
+    height: 15vmin;
+    width: 15vmin;
+}
+
+.Scale {
+    animation: scale 3s infinite;
+    transform-origin: center;
+}
+
+#Ceramics{
+    animation-delay: 0s;
+}
+
+#Metals{
+    animation-delay: 0.5s;
+}
+
+#Textiles{
+    animation-delay: 1s;
+}
+  
+@keyframes scale{
+    0%, 80%{
+      stroke-dashoffset: 1500;
+    } 
+    50%{
+      stroke-dashoffset: 0;
+      transform: scale(1.1, 1.1);
+    }
+}
+
+.AIcon img{
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+/**********************************************************************************/
+
+
+@media screen and (max-width:1000px){
+    
+    .LeaveArea{
+        height: 8.5vh;
+    }
+
+    #HeaderBase{
+        height: 8.5vh;
+        padding-right: 3vmin; padding-left: 3vmin;
+    }
+
+    #Logo{
+        height: 6vh;
+    }
+
+    #HomeBackground{
+        height: 90vh;
+    }
+
+    .HomeDisplay{
+        height: 90vh;
+    }
+
+    .HomeDivider{
+        height: 10vh;
+    }
+
+    .DropdownButton{
+        height: 4vh;
+        width: 4vh;
+    }   
+    
+    .DropdownButton:focus{
+        height: 4.2vh;
+        width: 4.2vh;
+    }
+
+    .DropdownMenu{
+        height: 25vh;
+        width: 45vmin;
+
+        top: 8.5vh;
+        right: 3vmin;
+    }
+
+    .TextBox{
+        height: 90vh;
+        padding-right: 3vmin;
+        padding-left: 3vmin;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 30%;
+    }
+
+    .HomeTitleText{
+        text-align: center;
+    }
+
+    .HomeSubText{
+        text-align: center;
+        border-bottom: 0px;
+    }
+
+    .HIcon{
+        height: 15vh;
+        width: 15vh;
+    }
+
+    .CategoriasBox{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .CuadroCategoria1{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .CuadroCategoria2{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .CuadroCategoria3{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    .BottomArea{
+        grid-row: 6/11;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /************************************************************************************/
+
+    .GSButtons{
+        flex-direction: column;
+    }
+
+    .GSTitle{
+        padding-bottom: 6%;
+    }
+
+    .FunBtn button{
+        width: 30vmax;
+        font-size: min(max(1rem, 5vw), 22px);
+        animation: Pulse 2s infinite ease-in;
+    }
+
+    .DescubrirBtn{
+        animation: PulseBlack 2s infinite ease-in;
+    }
+
+    .CloseBtn{
+        animation: PulseBlack 2s infinite ease-in;
+    }
+
+    .SnipetBtn{
+        animation: Pulse 2s infinite ease-in;
+    }
+
+    .ContactTitle{
+        height: 17.5vh;
+    }
+
+    .Descubrir{
+        padding-bottom: 17vmin;
+        box-shadow:0px 0px 10px 2px rgba(100, 100, 100, 0.8);
+    }
+
+    .ContactIconBox{
+        height: 100%;
+        width: 11vmin;
+    }
+    
+}
