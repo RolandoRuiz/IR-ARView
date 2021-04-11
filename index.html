@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles.css">
+    <script src="js/FrontEndFunctions.js"></script>
+    <title>AR | Impresiones Reynosa</title>
+</head>
+<body>
+    
+    <div onmouseleave="forceCloseDropdown()" onmouseout="headeropacityL()" onmouseover="headeropacityH()" class="LeaveArea">
+        <div id="HeaderBase">
+            <div class="HeaderLogo">
+                <img id="Logo" src="img\IRLogo.png" alt="AR | IMPRESIONES REYNOSA"><a href="index.html"></a></img>
+            </div>
+            <div class="HeaderDropdown">
+                <button onclick="toggleDropdown()" id="DropdownButton" class="DropdownButton"></button>
+            </div>
+        </div>
+        
+        <div id="DropdownVisibility" class="DropdownMenu">
+            <div onclick="ScrollTo('Inicio')" onmouseover="showSh1()" onclick="toggleDropdown()" class="Selectionbox"><a id="ShowInicio">Inicio</a></div>
+            <div onclick="ScrollTo('Descubrir')" onmouseover="showSh2()" onclick="toggleDropdown()" class="Selectionbox"><a id="ShowDescubrir">Descubrir</a></div>
+            <div onmouseover="showSh3()" onclick="toggleDropdown()" class="Selectionbox"><a id="ShowConfigurador" href="#Configurar">Configurador</a></div>
+            <div onclick="ScrollTo('Contacto')" onmouseover="showSh4()" onclick="toggleDropdown()" class="Selectionbox"><a id="ShowContacto">Contacto</a></div>
+        </div>
+    </div>
+
+    <div class="Home" id="Inicio">
+        <div id="HomeBackground">
+            <div class="HomeDisplay">
+                <div class="TextBox" id="TextBox1">
+                    <div class="HomeTitleText TextColors">La personalización</div>
+                    <div class="HomeSubText">conoce la realidad aumentada.</div>
+                </div>
+                <div class="TextBox" id="TextBox2">
+                    <div class="HomeTitleText TextColors">Descubre</div>
+                    <div class="HomeSubText">como funciona nuestra aplicación de realidad aumentada.</div>
+                </div>
+                <div class="TextBox" id="TextBox3">
+                    <div class="HomeTitleText TextColors">Configuremos</div>
+                    <div class="HomeSubText">tu primer diseño.</div>
+                </div>
+                <div class="TextBox" id="TextBox4">
+                    <div class="HomeTitleText TextColors">Visitanos</div>
+                    <div class="HomeSubText">y conoce más sobre nosotros.</div>
+                </div>
+            </div>
+        </div>
+        <div class="HomeDivider">
+            <div class="HomeIcons">
+                <div class="HIcon" id="Ceramics"><img src="svg\Ceramics.svg" alt="" srcset=""></div>
+                <div class="HIcon" id="Metals"><img src="svg\Metals.svg" alt="" srcset=""></div>
+                <div class="HIcon" id="Textiles"><img src="svg\Textiles.svg" alt=""></div>
+            </div>
+            <div id="DT1" >El mundo de la personalización</div>
+            <div id="DT2" >al alcance de tus manos.</div>
+        </div>
+    </div>
+
+    <div class="Descubrir" id="Descubrir">
+        <div class="DescubrirInicio">
+            <h1 class="Titletext">¿Cómo usamos la AR?</h1>
+            <button id="VideoExpandButton" class="VideoExpandButton"></button>
+        </div>
+        <div class="DescubrirTexto">
+            <p class="ContentText">En Impresiones Reynosa, nuestros clientes son nuestra mayor prioridad. Por ese mismo motivo, nos dedicamos a encontrar nuevas herramientas que permitan a nuestros clientes disfrutar de nuestros servicios.
+                <br><br>
+                Presentamos ARView. Una simple herramienta que nos permite crear diseños para productos personalizables a través de la web. E incluso nos permite verlos a tráves de nuestras cámaras con el uso de realidad aumentada. ARView abre un gran mundo de posibilidades para nuestros clientes: ¡Crea los diseños de tus sueños y visualizalos en los productos dentro de nuestro catalogo, todo al alcance de tus manos!</p>
+            <p class="Categorias"><button class="DescubrirBtn">¡Configura ahora!</button></p>
+        </div>
+
+        <div class="PasoTitle">
+            <div class="PTitle">Completa tu diseño por medio de estos pasos:</div>
+        </div>
+        <div class="MiddleLine"></div>
+        <div id="MiddleLineProgress"></div>
+        <div class="CirclesBox">
+            <button onfocus="CircleProgress1(), showPB1()" class="CircleBtn">1</button>
+            <button onfocus="CircleProgress2(), showPB2()" class="CircleBtn">2</button>
+            <button onfocus="CircleProgress3(), showPB3()" class="CircleBtn">3</button>
+            <button onfocus="CircleProgress4(), showPB4()" class="CircleBtn">4</button>
+        </div>
+        <div class="PasosBox">
+            <div class="PB" id="PB1">
+                <div class="PBTitle">Elige un modelo:</div>
+                <div class="PBText">Selecciona entre la gran selección de productos personalizables disponibles en nuestro sitio.</div>
+            </div>
+            <div class="PB" id="PB2">
+                <div class="PBTitle">Personaliza tu modelo:</div>
+                <div class="PBText">Modifica las propiedades de tu modelo y personaliza con la inclusión de imagenes, textos, fondos y mucho más.</div>
+            </div>
+            <div class="PB" id="PB3">
+                <div class="PBTitle">Visualiza tu diseño con AR:</div>
+                <div class="PBText">Presencia tu diseño final de manera tridimensional a través de la cámara de tu dispositivo con realidad aumentada.</div>
+            </div>
+            <div class="PB" id="PB4">
+                <div class="PBTitle">Realiza tu pedido:</div>
+                <div class="PBText">Confirma tu diseño y ordenalo en el producto seleccionado para su realización.</div>
+            </div>
+        </div>
+
+        <div id="CategoriasBox" class="CategoriasBox">
+            <div class="CuadroCategoria1">
+                <div id="Rot1" class="CCInner">
+                    <div class="CCFront1">
+                     <div class="BottomArea">
+                         <div class="Title2 TextColors">CERÁMICOS</div>
+                         <div class="Snipet">Conoce nuestra gran variedad de productos de cerámica personalizables.</div>
+                         <button onclick="Rotate1()" class="SnipetBtn">Aprende más</button>
+                     </div>   
+                    </div>
+                    <div class="CCBack">
+                        <div class="BgnCon1"></div>
+                        <div class="IconS">
+                            <img class="MiniIcon" src="svg\Ceramics.svg" alt="" srcset="">
+                        </div>
+                        <div class="Content">
+                            <div class="CText">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                        <button onclick="RotateR1()" class="CloseBtn">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="CuadroCategoria2">
+                <div id="Rot2" class="CCInner">
+                    <div class="CCFront2">
+                        <div class="BottomArea">
+                            <div class="Title2 TextColors">TEXTILES</div>
+                            <div class="Snipet">Conoce nuestra gran variedad de productos textiles personalizables.</div>
+                            <button onclick="Rotate2()" class="SnipetBtn">Aprende más</button>
+                        </div> 
+                    </div>
+                    <div class="CCBack">
+                        <div class="BgnCon2"></div>
+                        <div class="IconS">
+                            <img class="MiniIcon" src="svg\Textiles.svg" alt="">
+                        </div>
+                        <div class="Content">
+                            <div class="CText">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                        <button onclick="RotateR2()" class="CloseBtn">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="CuadroCategoria3">
+                <div id="Rot3" class="CCInner">
+                    <div class="CCFront3">
+                        <div class="BottomArea">
+                            <div class="Title2 TextColors">ACEROS</div>
+                            <div class="Snipet">Conoce nuestra gran variedad de productos de acero personalizables.</div>
+                            <button onclick="Rotate3()" class="SnipetBtn">Aprende más</button>
+                        </div> 
+                    </div>
+                    <div class="CCBack">
+                        <div class="BgnCon3"></div>
+                        <div class="IconS">
+                            <img class="MiniIcon" src="svg\Metals.svg" alt="" srcset="">
+                        </div>
+                        <div class="Content">
+                            <div class="CText">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                        <button onclick="RotateR3()" class="CloseBtn">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Catalogue">
+            <p class="CatText">¡Explora más a detalle nuestro catálogo de productos disponibles para personalización!</p>
+            <button class="SizeUp SnipetBtn">Muestrame</button>
+        </div>
+    </div>
+
+    <div class="Contacto" id="Contacto">
+        <div class="ContactDivider">
+            <p class="TitletextBlack">Conocenos</p>
+            <p class="PBText2">¡Visitanos o comunicate con nosotros!</p>
+        </div>
+
+        <div id="map">
+            <iframe class="map" width="90%" height="100%" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJC9SWM_0PZYYR-3Kg5oLtsXA&key=AIzaSyBCZXB614hlkE0RrdymLkAbRtN7m4VQAr0"></iframe>
+            
+            <div class="ContactBox">
+                <div class="ContactIconBox">
+                    <div class="CIconBox">
+                        <img onclick="ShowTextE()" src="img\EmailLogo.png" alt="" class="CIcon">
+                    </div>
+                    <div class="CIconBox">
+                        <img onclick="ShowTextF()" src="img\FacebookLogo.png" alt="" class="CIcon">
+                    </div>
+                    <div class="CIconBox">
+                        <img onclick="ShowTextW()" src="img\WhatsappLogo.png" alt="" class="CIcon">
+                    </div>
+                </div>
+                <div class="ContactTextBox">
+                    <div class="CTextBox" id="CTB1">impresionesreynosa@gmail.com</div>
+                    <div class="CTextBox" id="CTB2">Impresiones Reynosa</div>
+                    <div class="CTextBox" id="CTB3">899-355-0737</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Footer">
+        <p class="Rights">®2020 Impresiones Reynosa | Derechos reservados</p>
+        <P class="PageLinks">
+            <a href="#Inicio">Inicio</a> | <a href="#Descubrir">Descubrir</a> | <a href="">Configurador</a> | <a href="#Contacto">Contacto</a>
+        </P>
+        <P class="ExtLinks">
+            <a href="">Terminos</a> | <a href="">Privacidad</a>
+        </P>
+
+    </div>
+
+    <div class="TermsServiceBox"></div>
+    <div class="TermsServiceBox"></div>
+</body>
+</html>
