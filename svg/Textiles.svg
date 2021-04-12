@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.5 345.5">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 8.5px;
+      }
+
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-linejoin: round;
+      }
+
+      .path {
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+        animation: pulse 3s infinite;
+        animation-delay: 1s;
+      }
+      
+      
+      @keyframes pulse {
+        0%, 80%{
+          stroke-dashoffset: 1500;
+        } 
+        50%{
+          stroke-dashoffset: 0;
+        }
+
+    </style>
+  </defs>
+  <g id="Capa_2" data-name="Capa 2">
+    <g id="Capa_1-2" data-name="Capa 1">
+      <circle class="cls-1 path" cx="172.7" cy="172.7" r="168.5"/>
+      <path class="cls-1 path" d="M171.2,48l76,27"/>
+      <path class="cls-2 path" d="M247.2,75h0a59,59,0,0,1,36.5,37.4l23.5,71.8L264.8,208l-14.9-32.4L204.8,302.7,62,251.9l45.7-128.7L73.5,140,55.6,94.8,119.2,54a59,59,0,0,1,52-6h0c-5.4,20.1,7.5,35.8,27.5,42.9S238.6,94,247.2,75"/>
+    </g>
+  </g>
+</svg>

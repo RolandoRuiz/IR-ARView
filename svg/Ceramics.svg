@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.5 345.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 8.5px;
+      }
+
+      .path {
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+        animation: pulse 3s infinite;
+        animation-delay: 0s;
+      }
+      
+      @keyframes pulse {
+        0%, 80%{
+          stroke-dashoffset: 1500;
+        } 
+        50%{
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </defs>
+  <g id="Capa_2" data-name="Capa 2">
+    <g id="Capa_1-2" data-name="Capa 1">
+      <circle class="cls-1 path" cx="172.7" cy="172.7" r="168.5"/>
+      <ellipse class="cls-1 path" cx="130.6" cy="99.9" rx="90.1" ry="39.2" transform="translate(-28.9 60.1) rotate(-23.4)"/>
+      <path class="cls-1 path" d="M213.3,64.1l16,36.9a31.7,31.7,0,0,1,14.2-12.7c21.2-9.2,49.2,8.2,62.5,38.8s6.8,63-14.5,72.2a32,32,0,0,1-18.9,1.7l5.8,13.6c9.7,22.3-19.4,56.5-65.1,76.3s-90.5,17.6-100.2-4.7L47.9,135.7"/>
+    </g>
+  </g>
+</svg>
