@@ -40,7 +40,7 @@ function forceCloseDropdown(){
     Sh1.style.display = 'flex';
     Sh1.style.animation = 'appear';
     Sh1.style.animationDuration = '1s';
-    BackImg.style.backgroundImage = "url(../img/Categories/CategoryWearables.jpg)";
+    BackImg.style.backgroundImage = "url(IR-ARView/img/Categories/CategoryWearables.jpg)";
   }
 }
 
@@ -58,7 +58,7 @@ function showSh1() {
     Sh1.style.display = 'flex';
     Sh1.style.animation = 'appear';
     Sh1.style.animationDuration = '1s';
-    BackImg.style.backgroundImage = "url(../img/Categories/CategoryWearables.jpg)";
+    BackImg.style.backgroundImage = "url(IR-ARView/img/Categories/CategoryWearables.jpg)";
   }
 }
 
@@ -76,7 +76,7 @@ function showSh2(){
   Sh1.style.animation = 'appear';
   Sh1.style.animationDuration = '1s';
   Sh1.style.animationTimingFunction = 'ease-in-out';
-  BackImg.style.backgroundImage = "url(../img/Categories/Test.jpg)";
+  BackImg.style.backgroundImage = "url(IR-ARView/img/Categories/Test.jpg)";
 }
 
 function showSh3(){
@@ -93,7 +93,7 @@ function showSh3(){
   Sh1.style.animation = 'appear';
   Sh1.style.animationDuration = '1s';
   Sh1.style.animationTimingFunction = 'ease-in-out';
-  BackImg.style.backgroundImage = "url(../img/Categories/CategoryMetals.jpg)";
+  BackImg.style.backgroundImage = "url(IR-ARView/img/Categories/CategoryMetals.jpg)";
 }
 
 function showSh4(){
@@ -110,7 +110,7 @@ function showSh4(){
   Sh1.style.animation = 'appear';
   Sh1.style.animationDuration = '1s';
   Sh1.style.animationTimingFunction = 'ease-in-out';
-  BackImg.style.backgroundImage = "url(../img/OurLocation.jpg)";
+  BackImg.style.backgroundImage = "url(IR-ARView/img/OurLocation.jpg)";
 }
 
 function Rotate1() {
