@@ -40,7 +40,7 @@ function forceCloseDropdown(){
     Sh1.style.display = 'flex';
     Sh1.style.animation = 'appear';
     Sh1.style.animationDuration = '1s';
-    BackImg.style.backgroundImage = "url(https://rolandoruiz.github.io/IR-ARView/img/Categories/CategoryWearables.jpg)";
+    BackImg.style.backgroundImage = "url(/IR-ARView/img/Categories/CategoryWearables.jpg)";
   }
 }
 
