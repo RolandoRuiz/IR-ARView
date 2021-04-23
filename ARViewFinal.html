@@ -12,17 +12,16 @@
 <body>
 
     <a-scene embedded arjs vr-mode-ui="enabled: false">
-        <a-marker type="pattern" url="Markers/pattern-MarketAR.patt">
-          
-          <a-assets>
-            <a-asset-item response-type=“arraybuffer” id="puffer" src="3Dmodels/TazaModelo3D4.gltf">
-            </a-asset-item>
-          </a-assets>
-     
-          <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 15000; easing: linear" position="0 0 0" scale="1 1 1" gltf-model="#puffer"></a-entity>
 
-        </a-marker>
-        <a-entity camera></a-entity>
+      <a-assets>
+        <a-asset-item response-type=“arraybuffer” id="puffer" src="models/TazaModelo3D4.gltf">
+        </a-asset-item>
+      </a-assets>
+
+      <a-marker type="pattern" url="Markers/pattern-MarketAR.patt">
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 15000; easing: linear" position="0 0 0" scale="1 1 1" gltf-model="#puffer"></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
       </a-scene>
 
       
