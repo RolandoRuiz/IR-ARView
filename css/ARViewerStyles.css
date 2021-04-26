@@ -15,7 +15,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-right: 3vmin; padding-left: 3vmin;
+    padding-top: 2vmin; padding-right: 3vmin; padding-left: 3vmin;
     z-index: 100;
     position: absolute;
     top: 0;
@@ -31,7 +31,6 @@ html{
     height: 100%;
     width: 100%;
     position: relative;
-    grid-column: 1/5;
     z-index: 100;
     display: flex;
     flex-direction: column;
